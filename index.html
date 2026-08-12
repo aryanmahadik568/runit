@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RunIt - Own the World you Run</title>
+  <meta name="description" content="RunIt is the ultimate territory capturing fitness game. Run, conquer, and steal territory while competing on real-world maps.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <img src="assets/logo.png" alt="RunIt Logo" class="logo-icon">
+        <span class="logo-text">Run<span class="logo-highlight">It</span></span>
+      </a>
+      
+      <button class="btn-download" id="openDownloadBtn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        Download Now
+      </button>
+    </div>
+  </header>
+
+  <!-- SECTION 1: LANDING PAGE HERO -->
+  <section class="hero-section" id="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <span class="title-line-1">Own the</span>
+        <span class="title-line-2">World you Run.</span>
+      </h1>
+      
+      <div class="hero-badge">
+        <span class="badge-dot">•</span> Run 
+        <span class="badge-dot">•</span> Conquer 
+        <span class="badge-dot">•</span> Steal
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: HOW THE GAME WORKS (SCROLL COVER PAGE) -->
+  <section class="how-it-works-outer" id="how-it-works">
+    <div class="sticky-wrapper">
+      <div class="how-it-works-card">
+        <h2 class="section-title">
+          HOW <span class="cyan-highlight">THE GAME</span> WORKS.
+        </h2>
+
+        <div class="steps-grid" id="stepsGrid">
+          <!-- Container 1: Run -->
+          <div class="step-card active" data-step="1">
+            <div class="step-icon-wrapper">
+              <svg viewBox="0 0 24 24" class="step-icon" fill="currentColor">
+                <path d="M13.49 5.48c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm-3.6 13.9 1-4.4 2.1 2v6h2v-7.5l-2.1-2 .6-3c1.3 1.5 3.3 2.5 5.5 2.5v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1l-5.2 2.2v4.7h2v-3.4l1.9-.7z"/>
+              </svg>
+            </div>
+            <h3 class="step-title">Run</h3>
+            <p class="step-desc">Start a run and explore your surroundings on foot.</p>
+          </div>
+
+          <!-- Container 2: Capture -->
+          <div class="step-card" data-step="2">
+            <div class="step-icon-wrapper">
+              <svg viewBox="0 0 24 24" class="step-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="22" y1="12" x2="18" y2="12"></line>
+                <line x1="6" y1="12" x2="2" y2="12"></line>
+                <line x1="12" y1="6" x2="12" y2="2"></line>
+                <line x1="12" y1="22" x2="12" y2="18"></line>
+              </svg>
+            </div>
+            <h3 class="step-title">Capture</h3>
+            <p class="step-desc">Run through unclaimed or rival territory to capture it and make it yours.</p>
+          </div>
+
+          <!-- Container 3: Defend -->
+          <div class="step-card" data-step="3">
+            <div class="step-icon-wrapper">
+              <svg viewBox="0 0 24 24" class="step-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h3 class="step-title">Defend</h3>
+            <p class="step-desc">Keep running in your territory to defend it from other players trying to take it.</p>
+          </div>
+
+          <!-- Container 4: Track -->
+          <div class="step-card" data-step="4">
+            <div class="step-icon-wrapper">
+              <svg viewBox="0 0 24 24" class="step-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <h3 class="step-title">Track</h3>
+            <p class="step-desc">The app tracks your route and records every kilometer you complete.</p>
+          </div>
+        </div>
+
+        <!-- Task / Progress Bar -->
+        <div class="taskbar-container">
+          <div class="taskbar-fill" id="taskbarFill" style="width: 25%;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: LEADERBOARD -->
+  <section class="leaderboard-section" id="leaderboard">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="cyan-highlight">LEADER</span>BOARD
+      </h2>
+      <p class="section-subtitle">Fight for the highest rank by expanding and protecting your territory.</p>
+
+      <div class="leaderboard-grid">
+        <!-- Featured #1 Winner Card -->
+        <div class="featured-card">
+          <div class="featured-avatar-wrapper">
+            <img src="assets/avatar_soham.png" alt="Soham" class="featured-avatar">
+          </div>
+          <h3 class="featured-name">Soham</h3>
+          <p class="featured-role">Area Dominator</p>
+          <span class="featured-id">Runit_id******</span>
+
+          <div class="featured-score-badge">
+            <span class="score-number">169</span>
+            <span class="score-label">Tiles</span>
+          </div>
+        </div>
+
+        <!-- Leaderboard Top 5 List -->
+        <div class="leaderboard-list">
+          <!-- Rank 1 -->
+          <div class="leader-row rank-1 active">
+            <div class="rank-num">1.</div>
+            <img src="assets/avatar_soham.png" alt="Soham" class="leader-avatar">
+            <div class="leader-info">
+              <div class="leader-name">Soham</div>
+              <div class="leader-role">Area Dominator</div>
+            </div>
+            <div class="leader-badge cyan-glow">169 T</div>
+          </div>
+
+          <!-- Rank 2 -->
+          <div class="leader-row rank-2">
+            <div class="rank-num">2.</div>
+            <img src="assets/avatar_user2.png" alt="User 2" class="leader-avatar">
+            <div class="leader-info">
+              <div class="leader-name">User 2</div>
+              <div class="leader-role">Daily Runner</div>
+            </div>
+            <div class="leader-badge cyan-glow">143 T</div>
+          </div>
+
+          <!-- Rank 3 -->
+          <div class="leader-row rank-3">
+            <div class="rank-num">3.</div>
+            <img src="assets/avatar_user3.png" alt="User 3" class="leader-avatar">
+            <div class="leader-info">
+              <div class="leader-name">User 3</div>
+              <div class="leader-role">Map Explorer</div>
+            </div>
+            <div class="leader-badge cyan-glow">120 T</div>
+          </div>
+
+          <!-- Rank 4 -->
+          <div class="leader-row rank-4">
+            <div class="rank-num">4.</div>
+            <img src="assets/avatar_user4.png" alt="User 4" class="leader-avatar">
+            <div class="leader-info">
+              <div class="leader-name">User 4</div>
+              <div class="leader-role">Ghost Runner</div>
+            </div>
+            <div class="leader-badge blue-glow">118 T</div>
+          </div>
+
+          <!-- Rank 5 -->
+          <div class="leader-row rank-5">
+            <div class="rank-num">5.</div>
+            <img src="assets/avatar_user5.png" alt="User 5" class="leader-avatar">
+            <div class="leader-info">
+              <div class="leader-name">User 5</div>
+              <div class="leader-role">Rapid Capture</div>
+            </div>
+            <div class="leader-badge blue-glow">98 T</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: TRACK RECORDS -->
+  <section class="track-records-section" id="track-records">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="cyan-highlight">TRACK</span> RECORDS
+      </h2>
+
+      <div class="records-grid">
+        <!-- Top Stats Row -->
+        <div class="stat-card">
+          <div class="stat-header">
+            <span class="vertical-bar"></span>
+            <span class="stat-label">Consistency</span>
+          </div>
+          <div class="stat-value cyan-val">45 %</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-header">
+            <span class="vertical-bar"></span>
+            <span class="stat-label">Active Time</span>
+          </div>
+          <div class="stat-value cyan-val">10:05:00</div>
+        </div>
+
+        <!-- Line Chart Container (Spans 2 rows on right) -->
+        <div class="chart-card">
+          <canvas id="runChart"></canvas>
+          <div class="chart-footer-label">Km covered every day</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-header">
+            <span class="vertical-bar"></span>
+            <span class="stat-label">Avg Pace</span>
+          </div>
+          <div class="stat-value cyan-val">7:00/km</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-header">
+            <span class="vertical-bar"></span>
+            <span class="stat-label">Total Run</span>
+          </div>
+          <div class="stat-value cyan-val">15 Runs</div>
+        </div>
+
+        <!-- Bottom Stats Row -->
+        <div class="stat-card">
+          <div class="stat-header">
+            <span class="vertical-bar"></span>
+            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3l4 8 5-5 5 15H2L8 3z"></path></svg>
+            <span class="stat-label">Area Owned</span>
+          </div>
+          <div class="stat-value cyan-val">150 T</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-header">
+            <span class="vertical-bar"></span>
+            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+            <span class="stat-label">Explore Ratio</span>
+          </div>
+          <div class="stat-value cyan-val">34.2 %</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-header">
+            <span class="vertical-bar"></span>
+            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            <span class="stat-label">Tiles Cover</span>
+          </div>
+          <div class="stat-value cyan-val">52 T</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-header">
+            <span class="vertical-bar"></span>
+            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+            <span class="stat-label">Repeat Ratio</span>
+          </div>
+          <div class="stat-value cyan-val">84 %</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-header">
+            <span class="vertical-bar"></span>
+            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+            <span class="stat-label">Area Growth</span>
+          </div>
+          <div class="stat-value cyan-val">19 T</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: COMMON QUESTIONS (FAQ ACCORDION) -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <h2 class="faq-section-title">
+        <span class="cyan-highlight">COMMON</span><br>
+        QUESTION
+      </h2>
+
+      <div class="faq-accordion">
+        <!-- Question 1 -->
+        <div class="faq-item open">
+          <button class="faq-question">
+            <span>How much does RunIt cost?</span>
+            <div class="chevron-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="18 15 12 9 6 15"></polyline>
+              </svg>
+            </div>
+          </button>
+          <div class="faq-answer">
+            <p>RunIt is completely <strong>free to use</strong>. You can download the app, run, capture territory, compete with others, and enjoy the game without any cost.</p>
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Is RunIt only for runners?</span>
+            <div class="chevron-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </button>
+          <div class="faq-answer">
+            <p>Not at all! <strong>RunIt is for everyone who loves to compete.</strong> Whether you're a regular runner, a beginner, or simply someone who enjoys competition and challenges, RunIt is built for you.</p>
+          </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can someone cheat in RunIt?</span>
+            <div class="chevron-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </button>
+          <div class="faq-answer">
+            <p>We take fair competition seriously. <strong>RunIt uses anti-cheat systems to detect suspicious or unfair activity</strong>, helping keep the competition fair for everyone.</p>
+          </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How can I install the RunIt app?</span>
+            <div class="chevron-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </button>
+          <div class="faq-answer">
+            <p>Simply <strong class="link-trigger" id="registerEmailTrigger">register your email address</strong> on our website. Your RunIt app installation link will be sent to your registered email <strong>within 24 hours</strong>.</p>
+          </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>I'm new to RunIt. Is there help if I get stuck?</span>
+            <div class="chevron-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </button>
+          <div class="faq-answer">
+            <p>Absolutely! If you're new to RunIt or aren't sure how something works, head to the <strong>Rules</strong> section inside the app's Settings. It provides guidance to help you understand how RunIt works and get started.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD MODAL -->
+  <div class="modal-overlay" id="downloadModal">
+    <div class="modal-card">
+      <button class="modal-close" id="closeModalBtn">&times;</button>
+      <div class="modal-header">
+        <img src="assets/logo.png" alt="RunIt Logo" class="modal-logo">
+        <h3>Get the RunIt App</h3>
+        <p>Register your email address to receive your exclusive installation link within 24 hours.</p>
+      </div>
+
+      <form class="modal-form" id="emailForm">
+        <div class="input-group">
+          <input type="email" id="userEmail" placeholder="Enter your email address" required>
+        </div>
+        <button type="submit" class="btn-submit">
+          Send Installation Link
+        </button>
+      </form>
+
+      <div class="success-message" id="successMessage" style="display: none;">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#00F2FE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+          <polyline points="22 4 12 14.01 9 11.01"></polyline>
+        </svg>
+        <h4>Success!</h4>
+        <p>Your download link has been queued for dispatch to <span id="registeredEmailSpan"></span>. Keep an eye on your inbox!</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 RunIt Inc. Own the World you Run. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Supabase Client CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app.js"></script>
+</body>
+</html>
